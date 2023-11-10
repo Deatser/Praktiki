@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <link rel="stylesheet" href="styles.css"> <!-- Подключение css-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="css/media.css"
+      media="all and (max-width: 900px)"
+      type="text/css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+	<meta name="viewport" content="width=device-width, initialscale=1.0">
+	<title>Медитация</title> <!-- подюключение названия страницы -->
+	<link rel="icon" type="image/png" href="C:/Users/Deatser/Desktop/Praktiki/lotus.png"> <!-- подключение фавиконки страницы -->
+	<link rel="icon" type="image/png" href=" https://cdn-icons-png.flaticon.com/128/2982/2982182.png">
+	<style>
+	.custom-btn {
+        width: 130px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+          7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+          4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+        outline: none;
+      }
+      .btn-9 {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}	
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: #1fd1f9;
+	background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all 0.3s ease;
+  transform: translateX(120px);
+}
+.btn-9:hover {
+  background: transparent;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5)
+              
+  
+}
+
+
+.btn-4 {
+	margin-bottom: 5px;
+	background-color: #4dccc6;
+	background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+	line-height: 42px;
+	padding: 0;
+	border: none;
+}
+.btn-4:hover{
+  background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+}
+
+.btn-4:before {
+  height: 0%;
+  width: .1px;
+}
+.btn-4:after {
+  width: 0%;
+  height: .1px;
+}
+.btn-4:hover:before {
+  height: 100%;
+}
+.btn-4:hover:after {
+  width: 100%;
+}
+
+
+      .btn-3 {
+		margin-bottom: 5px;
+        background: rgb(0, 172, 238);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 172, 238, 1) 0%,
+          rgba(2, 126, 251, 1) 100%
+        );
+        width: 130px;
+        height: 40px;
+        line-height: 42px;
+        padding: 0;
+        border: none;
+      }
+      .btn-3 span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .btn-3:before,
+      .btn-3:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        background: rgba(2, 126, 251, 1);
+        transition: all 0.3s ease;
+      }
+      .btn-3:before {
+        height: 0%;
+        width: 2px;
+      }
+      .btn-3:after {
+        width: 0%;
+        height: 2px;
+      }
+      .btn-3:hover {
+        background: transparent;
+        box-shadow: none;
+      }
+      .btn-3:hover:before {
+        height: 100%;
+      }
+      .btn-3:hover:after {
+        width: 100%;
+      }
+      .btn-3 span:hover {
+        color: rgba(2, 126, 251, 1);
+      }
+      .btn-3 span:before,
+      .btn-3 span:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        background: rgba(2, 126, 251, 1);
+        transition: all 0.3s ease;
+      }
+      .btn-3 span:before {
+        width: 2px;
+        height: 0%;
+      }
+      .btn-3 span:after {
+        width: 0%;
+        height: 2px;
+      }
+      .btn-3 span:hover:before {
+        height: 100%;
+      }
+      .btn-3 span:hover:after {
+        width: 100%;
+      }
+      .btn-1 {
+  margin-top: 5px;
+  background: rgb(6,14,131);
+  background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+  border: none;
+}
+.btn-1:hover {
+   background: rgb(0,3,255);
+background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+}
+.dropbtn {
+        background-image: url("pngwing.com.png");
+        background-size: cover;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #73e082;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.63);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #bd7c8f;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #00000050;
+      }
+      
+      *, *:after, *:before { 
+      
+	    box-sizing: border-box; 
+}
+
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text-one figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text-one figure h3 span {
+	font-weight: 800;
+}
+.hover-text-one figure h3,
+.hover-text-one figure p {
+	margin: 0;
+}
+.hover-text-one figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Эффект при наведении */
+
+figure.effect-text-two h3 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: #f66d52 !important;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+figure.effect-text-two p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+	transition: all 0.3s ease;
+}
+figure.effect-text-two:hover h3 {
+	color: pink;
+}
+figure.effect-text-two:hover figcaption::before ,
+figure.effect-text-two:hover p {
+	opacity: 1;
+}
+
+	</style>
+</head>
+<body> 
+<header>
+
+<section class="top-nav">
+    <div class="animate-grow">
+      	<img src="https://cdn-icons-png.flaticon.com/128/2982/2982182.png" alt="Lotus" width="30" height="30">
+    </div>
+
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+		<li><button class="custom-btn btn-9"><span><a href="#Topic1">Основная</a></span></button></li>
+		<li><button class="custom-btn btn-3"><span><a href="#Topic3">Виды</a></span></button></li>
+		<li><button class="custom-btn btn-4"><span><a href="#svyaz">Связь</a></span></button></li>
+    </ul>
+  </section>
+  
+<!---->
+</header>
+	<main>
+
+
+
+	<section>
+
+	<b><h2>Теория, связанная с медитацией</h2></b>
+	<article>
+	<b><h3 id="Topic1">Определение медитации</h3></b> <!-- привязка id к тексту -->
+	<p>
+		<b>Медитация</b> (лат. <i>meditatio</i> - «размышление») - это состояние расслабленной  
+		сосредоточенности, в котором идет отрешённое наблюдение за происходящим.<sub><cite><abbr title="Шохин, 2011, с. 490.">[1]</abbr></cite></sub>.
+		Итак, медитация <u><strong>необходима людям</u></strong>, прежде всего, для «разгрузки мозга» и укрепления нервной системы:
+		В некоторых случаях медитация используется при лечении <abbr title="Детский церебральный паралич">ДЦП</abbr>.
+	</p>
+	</article>
+	<article>
+		<b><h3 id="Topic3">Виды и техники медитации</h3></b>
+	Всего существует множество видов и техник медитации, вот самые популярные из них:
+	<ol type="I" start="1"> <!-- упорядоченный список с неупорядоченным списком внутри -->
+		<li>Йогические медитации и практики:
+			<ul type="disc">
+				<li>Йога нидра – практика глубокого расслабления.<sup><abbr title="'Чем тише и спокойнее ум, чем здоровее тело, тем больше шансов обратить внимание на то, что находится за их пределами' - Цитата из Йога нидра.">*</abbr></sup></li>
+				<li>Тантрическая медитация</li>
+			</ul>
+		</li>
+		<li>Буддийские техники медитации:
+			<ul type="disc">
+				<li>Дзен медитация (дзадзен)</li>
+				<li>Випассана медитация</li>
+			</ul>
+		</li>
+		<li>Китайские виды медитации:
+			<ul type="disc">
+				<li>Даосская медитация</li>
+				<li>Цигун</li>
+			</ul>
+		</li>
+	</ol>
+	</p>
+
+	</article>
+	</section>	
+
+
+	
+	</main>
+	<footer>
+		<p id="svyaz">Свяжитесь с нами:</p> <!-- добавление номера телефона и адреса электронной почты -->
+		<address>
+			<a href="tel:88005553535" id="svyaz">Звоните сюда!</a><br> 
+			<a href="tel:88888888888" id="svyaz">Либо звоните сюда!</a><br> 
+			<a href="mailto:abvgd@gmail.com">Пишите сюда!</a>
+		</address>
+	</footer>
+
+</body>
+</html>

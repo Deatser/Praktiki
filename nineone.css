@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Shantell+Sans:wght@500&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Shantell Sans', cursive;
+    
+}
+body
+{
+    background: #FFAFBD;
+}
+
+.container {
+    text-align: center;
+    margin-top: 150px;
+    
+}
+
+h1 {
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #808080;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 20px;
+    font-weight: bold;
+}

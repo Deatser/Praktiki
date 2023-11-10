@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Shantell+Sans:wght@500&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Shantell Sans', cursive;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#FFAFBD,#ffc3a0);
+    background-attachment: fixed;
+}
+.container
+{
+    position: relative;
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .card
+{
+    position: relative; 
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+.container:hover .card
+{
+    filter: blur(10px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+.container .card:hover
+{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+.container .card .circle
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: inset(0 0 61% 0);
+}
+.container .card .circle h2
+{
+    color:#fff;
+    font-size: 4.5em;
+    padding: 30px 0;
+    text-align: center;
+}
+.container .card .content
+{
+		position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.container .card .content p
+{
+    color: #666;
+		
+}
+.container .card .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background:#000;
+    color: #fff;
+    border-radius: 40px;
+    text-transform: none;
+    margin-top: 20px;
+}
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .content a
+{
+    background: #f574d5;
+}
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .content a
+{
+    background: rgb(247, 73, 131);
+}
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .content a
+{
+    background: rgb(235, 35, 111);
+}

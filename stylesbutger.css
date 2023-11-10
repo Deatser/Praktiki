@@ -1,0 +1,36 @@
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.gallery-item {
+width: 200px;
+height: 200px;
+margin: 10px;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+max-width: 767px {
+.gallery-item {
+width: 100%;
+}
+}
+
+min-width: 768px and (max-width: 1023px) {
+.gallery-item {
+width: 33.33%;
+}
+}
+
+min-width: 1024px {
+.gallery-item {
+width: 25%;
+}
+}

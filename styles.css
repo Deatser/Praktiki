@@ -1,0 +1,284 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+*{
+	font-family: "Raleway";
+	box-sizing: border-box;
+}
+
+.animate-grow:hover{
+	animation: animate_grow 2s infinite ease-in;
+	
+}
+.animate-grow1{
+	animation: animate_grow 2s infinite ease-in;
+	
+}
+
+@keyframes animate_grow{
+	
+	0% {
+		transform: scale3d(1,1,1) ;
+		
+	}
+	50% {
+		transform: scale3d(1.5,1.5,1.5) ;
+	}
+	100% {
+		transform: scale3d(1,1,1);
+	}
+}
+
+@keyframes animate_grow1{
+	
+	0% {
+		transform: scale3d(1,1,1) ;
+		
+	}
+	50% {
+		transform: scale3d(1.5,1.5,1.5) ;
+	}
+	100% {
+		transform: scale3d(1,1,1);
+	}
+}
+
+p:active {
+  background: #eee;
+}
+a:visited {
+  color: #cc0256;
+}
+a:hover {
+  color:red ;
+}
+::placeholder{
+	font-style:italic;
+	color:gray;
+}
+a{
+	text-decoration: none;
+}
+nav{
+    position: relative;
+	margin: 5px;
+}
+
+
+
+#ikonka{
+	
+    right: 20px;
+    top: 10px;
+	width: 30px;
+    height: 30px;
+    background-image: url("lotus.png");
+	
+}
+
+#div2{
+	position: absolute;
+	height:200px;
+	width:400px;
+	left: 490px;
+	top: 165px;
+	background-image: url("https://www.wudaoqigong.ru/upload/images/pages/main/about-n3.jpg");
+}
+
+
+aside {
+  width: 50%;
+  padding-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  color: #29627e;
+}
+
+article pre{ 
+	color: #29627e;
+}
+aside > p {  
+  margin: 0.5rem;
+}
+aside + b {   
+ color: #29627e;
+}
+ul > li{
+	list-style: square;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top:10px;
+  padding: 5px;
+  background: linear-gradient(90deg, #65d3ba,#2cfab8,#3eef74);
+  color: #fff;
+}
+ #svyaz{
+	 margin-right: 10px;
+ }
+
+  
+}
+
+
+
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #65d3ba,#2cfab8,#3eef74);
+  
+ 
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #cc0256;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+ /* transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);*/
+  border-radius: 5px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+.gallery {
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.gallery-item {
+width: 200px;
+height: 200px;
+margin: 10px;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+max-width: 767px {
+.gallery-item {
+width: 100%;
+}
+}
+
+}
+
+min-width: 1024px {
+.gallery-item {
+width: 25%;
+}
+}
+
+
+@media (max-width: 700px) {
+
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);*/
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    /*transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);*/
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    
+    background-color: black;
+  }
+
+}
+
